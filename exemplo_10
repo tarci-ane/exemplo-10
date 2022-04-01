@@ -1,0 +1,44 @@
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main() {
+    
+    int m[10][10];
+
+    int linha, coluna, i;
+    srand(time(NULL));
+
+   
+    for(linha = 0; linha < 10; linha++)
+         for(coluna = 0; coluna < 10; coluna++)
+             m[linha][coluna] = rand() % 51;
+
+  
+    for(linha = 0; linha < 10; linha++) {
+         for(coluna = 0; coluna < 10; coluna++)
+             printf("%2d ", m[linha][coluna]);
+         printf("\n");
+    }
+
+    
+    printf("\n\nValores da linha 5 \n");
+    for(coluna = 0; coluna < 10; coluna++)
+         printf("%2d ", m[5][coluna]);
+
+   
+    printf("\n\nValores da coluna 5 \n");
+    for(linha = 0; linha < 10; linha++)
+         printf("%2d ", m[linha][5]);
+
+    
+    printf("\n\nValores da coluna 5 \n");
+    for(i = 0; i < 10; i++)
+         printf("%2d ", m[i][i]);
+
+    printf("\n\n");
+    
+    system("pause");
+}
